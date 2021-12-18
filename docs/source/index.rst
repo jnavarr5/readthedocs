@@ -1,4 +1,4 @@
-Welcome to Lumache's documentation!
+Welcome to the FUTURE FAQ page!
 ===================================
 
 **Lumache** (/lu'make/) is a Python library for cooks and food lovers
