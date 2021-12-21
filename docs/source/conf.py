@@ -2,9 +2,9 @@
 
 # -- Project information
 
-project = 'Lumache'
-copyright = '2021, Graziella'
-author = 'Graziella'
+project = 'Genome Browser FAQ'
+copyright = '2021, UCSC'
+author = 'Jairo'
 
 release = '0.1'
 version = '0.1.0'
