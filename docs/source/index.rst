@@ -62,3 +62,13 @@ Contents
    FAQblat
    FAQformat
    FAQcite
+   FAQcustom
+   FAQdisplay
+   FAQdownloads
+   FAQgenes
+   FAQlicense
+   FAQlink
+   FAQmaillist
+   FAQreleases
+   FAQtables
+   FAQtracks
