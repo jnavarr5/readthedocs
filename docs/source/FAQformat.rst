@@ -1,10 +1,9 @@
 Data File Formats
 =============================================
 
-Topics
-------
 
 General formats
+---------------
                
 
 -  `Axt format <../goldenPath/help/axt.html>`__
@@ -68,7 +67,7 @@ General formats
 -  `WIG format <#format6>`__
 
 ENCODE-specific formats
-                       
+-----------------------   
 
 -  `ENCODE broadPeak format <#format13>`__
 -  `ENCODE gappedPeak format <#format14>`__
@@ -79,7 +78,7 @@ ENCODE-specific formats
 -  `ENCODE tagAlign format <#format15>`__
 
 Download-only formats
-                     
+---------------------
 
 -  `.2bit format <#format7>`__
 -  `.fasta format <#format18>`__
