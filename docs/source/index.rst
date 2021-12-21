@@ -59,5 +59,5 @@ Contents
    :maxdepth:1
 
    usage
-   api
+   FAQblat
    FAQformat
