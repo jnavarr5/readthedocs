@@ -61,3 +61,4 @@ Contents
    usage
    FAQblat
    FAQformat
+   FAQcite
