@@ -23,4 +23,4 @@ Contents
 
    usage
    api
-   Frequently Asked Questions: Data File Formats
+   FAQformat
