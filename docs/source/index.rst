@@ -31,13 +31,6 @@ FAQ categories
 
    .. container:: col-md-7
 
-      Search the Genome Browser FAQs:  
-
-      Search the Genome Browser help pages:  
-
-      Search the entire Genome Browser website:  
-
-      Search our user-edited wiki website:  
 
       Search for genomic data from our `organism Gateway
       page <../cgi-bin/hgGateway>`__, `Track search
