@@ -1,4 +1,4 @@
-Frequently Asked Questions: Data File Formats
+Data File Formats
 =============================================
 
 Topics
