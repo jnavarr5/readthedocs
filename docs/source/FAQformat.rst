@@ -1501,7 +1501,7 @@ is appropriate for assessing the confidence of the mapping.
 #. **peptideRepeatCount** - Indicates how many times this same hit was
    observed.
    
-   Download-only formats
+Download-only formats
 =====================
 
 -  `.2bit format <#format7>`__
