@@ -67,29 +67,6 @@ General formats
 
 -  `WIG format <#format6>`__
 
-ENCODE-specific formats
-======================= 
-
--  `ENCODE broadPeak format <#format13>`__
--  `ENCODE gappedPeak format <#format14>`__
--  `ENCODE narrowPeak format <#format12>`__
--  `ENCODE pairedTagAlign format <#format16>`__
--  `ENCODE peptideMapping format <#format17>`__
--  `ENCODE RNA elements format <#format11>`__
--  `ENCODE tagAlign format <#format15>`__
-
-Download-only formats
-=====================
-
--  `.2bit format <#format7>`__
--  `.fasta format <#format18>`__
--  `.fastQ format <#format19>`__
--  `.nib format <#format8>`__
-
---------------
-
-`Return to FAQ Table of Contents <index.html>`__
-
 BED format
 ----------
 
@@ -1362,6 +1339,26 @@ speed up interactive display.
 Go to the `VCF Track Format <../goldenPath/help/vcf.html>`__ page for
 more information about VCF custom tracks.
 
+`Return to FAQ Table of Contents <index.html>`__
+
+--------------
+
+ENCODE-specific formats
+======================= 
+
+-  `ENCODE broadPeak format <#format13>`__
+-  `ENCODE gappedPeak format <#format14>`__
+-  `ENCODE narrowPeak format <#format12>`__
+-  `ENCODE pairedTagAlign format <#format16>`__
+-  `ENCODE peptideMapping format <#format17>`__
+-  `ENCODE RNA elements format <#format11>`__
+-  `ENCODE tagAlign format <#format15>`__
+
+--------------
+
+`Return to FAQ Table of Contents <index.html>`__
+
+
 ENCODE RNA elements: BED6 + 3 scores format
 -------------------------------------------
 
@@ -1589,6 +1586,18 @@ is appropriate for assessing the confidence of the mapping.
    genomic hits.
 #. **peptideRepeatCount** - Indicates how many times this same hit was
    observed.
+   
+   Download-only formats
+=====================
+
+-  `.2bit format <#format7>`__
+-  `.fasta format <#format18>`__
+-  `.fastQ format <#format19>`__
+-  `.nib format <#format8>`__
+
+--------------
+
+`Return to FAQ Table of Contents <index.html>`__
 
 Fasta format
 ------------
