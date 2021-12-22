@@ -1501,6 +1501,8 @@ is appropriate for assessing the confidence of the mapping.
 #. **peptideRepeatCount** - Indicates how many times this same hit was
    observed.
    
+--------------
+   
 Download-only formats
 =====================
 
@@ -1508,6 +1510,8 @@ Download-only formats
 -  `.fasta format <#format18>`__
 -  `.fastQ format <#format19>`__
 -  `.nib format <#format8>`__
+
+--------------
 
 
 .2bit format
