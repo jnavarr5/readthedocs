@@ -26,7 +26,7 @@ FAQ categories
       -  `Citing the Genome Browser <FAQcite.html>`__
       -  `Mirroring or Licensing the Genome Browser <FAQlicense.html>`__
       -  `Display Problems <FAQdisplay.html>`__
-      -  `ENCODE Resources and FAQ <../ENCODE/FAQ/index.html>`__
+      -  `ENCODE Resources and FAQ <FAQencode.html>`__
       -  `Posting a question to the mailing list <FAQmaillist.html>`__
 
    .. container:: col-md-7
