@@ -52,8 +52,6 @@ FAQ categories
 
    This project is under active development.
 
-Contents
---------
 
 .. toctree::
    :maxdepth:1
