@@ -1,5 +1,5 @@
-BLAT
-====
+BLAT sequence alignment
+=======================
 
 Topics
 ------
