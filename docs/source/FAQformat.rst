@@ -997,92 +997,6 @@ explanation of how to construct a microarray custom track, see the
 `Genome Browser
 Wiki <http://genomewiki.ucsc.edu/index.php/Microarray_track>`__.
 
-.2bit format
-------------
-
-A .2bit file stores multiple DNA sequences (up to 4 Gb total) in a
-compact randomly-accessible format. The file contains masking
-information as well as the DNA itself.
-
-The file begins with a 16-byte header containing the following fields:
-
--  **signature** - the number 0x1A412743 in the architecture of the
-   machine that created the file
--  **version** - zero for now. Readers should abort if they see a
-   version number higher than 0
--  **sequenceCount** - the number of sequences in the file
--  **reserved** - always zero for now
-
-All fields are 32 bits unless noted. If the signature value is not as
-given, the reader program should byte-swap the signature and check if
-the swapped version matches. If so, all multiple-byte entities in the
-file will have to be byte-swapped. This enables these binary files to be
-used unchanged on different architectures.
-
-The header is followed by a file index, which contains one entry for
-each sequence. Each index entry contains three fields:
-
--  **nameSize** - a byte containing the length of the name field
--  **name** - the sequence name itself (in ASCII-compatible byte
-   string), of variable length depending on nameSize
--  **offset** - the 32-bit offset of the sequence data relative to the
-   start of the file, not aligned to any 4-byte padding boundary
-
-The index is followed by the sequence records, which contain nine
-fields:
-
--  **dnaSize** - number of bases of DNA in the sequence
--  **nBlockCount** - the number of blocks of Ns in the file
-   (representing unknown sequence)
--  **nBlockStarts** - an array of length nBlockCount of 32 bit integers
-   indicating the (0-based) starting position of a block of Ns
--  **nBlockSizes** - an array of length nBlockCount of 32 bit integers
-   indicating the length of a block of Ns
--  **maskBlockCount** - the number of masked (lower-case) blocks
--  **maskBlockStarts** - an array of length maskBlockCount of 32 bit
-   integers indicating the (0-based) starting position of a masked block
--  **maskBlockSizes** - an array of length maskBlockCount of 32 bit
-   integers indicating the length of a masked block
--  **reserved** - always zero for now
--  **packedDna** - the DNA packed to two bits per base, represented as
-   so: T - 00, C - 01, A - 10, G - 11. The first base is in the most
-   significant 2-bit byte; the last base is in the least significant 2
-   bits. For example, the sequence TCAG is represented as 00011011.
-
-For a complete definition of all fields in the twoBit format, see
-`this <http://genome-source.soe.ucsc.edu/gitlist/kent.git/raw/master/src/inc/twoBit.h>`__
-description in the source code.
-
-.nib format
------------
-
-The .nib format pre-dates the .2bit format and is less compact. It
-describes a DNA sequence by packing two bases into each byte. Each .nib
-file contains only a single sequence. The file begins with a 32-bit
-signature that is 0x6BE93D3A in the architecture of the machine that
-created the file (or possibly a byte-swapped version of the same number
-on another machine). This is followed by a 32-bit number in the same
-format that describes the number of bases in the file. Next, the bases
-themselves are listed, packed two bases to the byte. The first base is
-packed in the high-order 4 bits (nibble); the second base is packed in
-the low-order four bits:
-
-::
-
-   byte = (base1<<4) + base2
-
-The numerical representations for the bases are:
-
-::
-
-   0 - T
-   1 - C
-   2 - A
-   3 - G
-   4 - N (unknown)
-
-The most significant bit in a nibble is set if the base is masked.
-
 GenePred table format
 ---------------------
 
@@ -1595,9 +1509,62 @@ is appropriate for assessing the confidence of the mapping.
 -  `.fastQ format <#format19>`__
 -  `.nib format <#format8>`__
 
---------------
 
-`Return to FAQ Table of Contents <index.html>`__
+.2bit format
+------------
+
+A .2bit file stores multiple DNA sequences (up to 4 Gb total) in a
+compact randomly-accessible format. The file contains masking
+information as well as the DNA itself.
+
+The file begins with a 16-byte header containing the following fields:
+
+-  **signature** - the number 0x1A412743 in the architecture of the
+   machine that created the file
+-  **version** - zero for now. Readers should abort if they see a
+   version number higher than 0
+-  **sequenceCount** - the number of sequences in the file
+-  **reserved** - always zero for now
+
+All fields are 32 bits unless noted. If the signature value is not as
+given, the reader program should byte-swap the signature and check if
+the swapped version matches. If so, all multiple-byte entities in the
+file will have to be byte-swapped. This enables these binary files to be
+used unchanged on different architectures.
+
+The header is followed by a file index, which contains one entry for
+each sequence. Each index entry contains three fields:
+
+-  **nameSize** - a byte containing the length of the name field
+-  **name** - the sequence name itself (in ASCII-compatible byte
+   string), of variable length depending on nameSize
+-  **offset** - the 32-bit offset of the sequence data relative to the
+   start of the file, not aligned to any 4-byte padding boundary
+
+The index is followed by the sequence records, which contain nine
+fields:
+
+-  **dnaSize** - number of bases of DNA in the sequence
+-  **nBlockCount** - the number of blocks of Ns in the file
+   (representing unknown sequence)
+-  **nBlockStarts** - an array of length nBlockCount of 32 bit integers
+   indicating the (0-based) starting position of a block of Ns
+-  **nBlockSizes** - an array of length nBlockCount of 32 bit integers
+   indicating the length of a block of Ns
+-  **maskBlockCount** - the number of masked (lower-case) blocks
+-  **maskBlockStarts** - an array of length maskBlockCount of 32 bit
+   integers indicating the (0-based) starting position of a masked block
+-  **maskBlockSizes** - an array of length maskBlockCount of 32 bit
+   integers indicating the length of a masked block
+-  **reserved** - always zero for now
+-  **packedDna** - the DNA packed to two bits per base, represented as
+   so: T - 00, C - 01, A - 10, G - 11. The first base is in the most
+   significant 2-bit byte; the last base is in the least significant 2
+   bits. For example, the sequence TCAG is represented as 00011011.
+
+For a complete definition of all fields in the twoBit format, see
+`this <http://genome-source.soe.ucsc.edu/gitlist/kent.git/raw/master/src/inc/twoBit.h>`__
+description in the source code.
 
 Fasta format
 ------------
@@ -1610,3 +1577,37 @@ FastQ format
 
 Click `here <http://maq.sourceforge.net/fastq.shtml>`__ for information
 about fastq format.
+
+.nib format
+-----------
+
+The .nib format pre-dates the .2bit format and is less compact. It
+describes a DNA sequence by packing two bases into each byte. Each .nib
+file contains only a single sequence. The file begins with a 32-bit
+signature that is 0x6BE93D3A in the architecture of the machine that
+created the file (or possibly a byte-swapped version of the same number
+on another machine). This is followed by a 32-bit number in the same
+format that describes the number of bases in the file. Next, the bases
+themselves are listed, packed two bases to the byte. The first base is
+packed in the high-order 4 bits (nibble); the second base is packed in
+the low-order four bits:
+
+::
+
+   byte = (base1<<4) + base2
+
+The numerical representations for the bases are:
+
+::
+
+   0 - T
+   1 - C
+   2 - A
+   3 - G
+   4 - N (unknown)
+
+The most significant bit in a nibble is set if the base is masked.
+
+--------------
+
+`Return to FAQ Table of Contents <index.html>`__
