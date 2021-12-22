@@ -57,17 +57,18 @@ Contents
 
 .. toctree::
    :maxdepth:1
+   :titleonly:True
 
-   usage
-   FAQblat
    FAQformat
-   FAQcite
-   FAQcustom
-   FAQdisplay
+   FAQblat
    FAQdownloads
    FAQgenes
-   FAQlicense
-   FAQlink
-   FAQmaillist
    FAQreleases
    FAQtracks
+   FAQlink
+   FAQcustom
+   FAQcite
+   FAQlicense
+   FAQdisplay
+   FAQmaillist
+   usage
