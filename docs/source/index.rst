@@ -58,7 +58,6 @@ Contents
 .. toctree::
    :maxdepth:1
    :titleonly:
-   :hidden:
 
    FAQformat
    FAQblat
