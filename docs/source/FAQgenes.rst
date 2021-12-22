@@ -1,8 +1,5 @@
-Gene tracks
+Genes and Gene tracks
 =======================================
-
-Topics
-------
 
 -  `What is a gene? <#gene>`__
 -  `What is a transcript and how is it related to a
