@@ -70,5 +70,6 @@ Contents
    FAQcite
    FAQlicense
    FAQdisplay
+   FAQencode
    FAQmaillist
    usage
