@@ -70,5 +70,4 @@ Contents
    FAQlink
    FAQmaillist
    FAQreleases
-   FAQtables
    FAQtracks
